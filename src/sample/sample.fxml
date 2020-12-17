@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <tabs>
+      <Tab closable="false" text="page1">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+                <children>
+                    <Button fx:id="button" layoutX="300.0" layoutY="317.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="131.0" text="Вычислить" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                    <Label fx:id="labelXn" layoutX="27.0" layoutY="57.0" prefHeight="18.0" prefWidth="71.0" text="Xn:" />
+                    <Label fx:id="labelXk" layoutX="27.0" layoutY="92.0" prefHeight="18.0" prefWidth="71.0" text="Xk:" />
+                    <TextField fx:id="fieldXn" layoutX="116.0" layoutY="55.0" prefHeight="26.0" prefWidth="120.0" text="0.1" />
+                    <TextField fx:id="fieldXk" layoutX="116.0" layoutY="88.0" prefHeight="26.0" prefWidth="120.0" text="1" />
+                    <ScrollPane fx:id="area" layoutX="12.0" layoutY="183.0" prefHeight="204.0" prefWidth="271.0" />
+                    <Label fx:id="labelH" layoutX="27.0" layoutY="124.0" prefHeight="18.0" prefWidth="71.0" text="Шаг" />
+                    <Button fx:id="cleanButton" layoutX="456.0" layoutY="348.0" mnemonicParsing="false" text="Очистить экран" />
+                    <TextField fx:id="fieldH" layoutX="116.0" layoutY="120.0" prefHeight="26.0" prefWidth="120.0" text="0.2" />
+                    <Label layoutX="27.0" layoutY="29.0" prefHeight="18.0" prefWidth="71.0" text="Точность" />
+                    <TextField fx:id="fieldM" layoutX="116.0" layoutY="25.0" prefHeight="26.0" prefWidth="120.0" text="8" />
+                    <RadioButton fx:id="radioCos" layoutX="264.0" layoutY="29.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="71.0" selected="true" text="cos(x)">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="funcGroup" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="radioE" layoutX="264.0" layoutY="57.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="71.0" text="e^x" toggleGroup="$funcGroup" />
+                    <RadioButton fx:id="radioSin" layoutX="264.0" layoutY="83.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="71.0" text="sin(x)" toggleGroup="$funcGroup" />
+                </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="page2">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Slider fx:id="redSlider" layoutX="16.0" layoutY="14.0" max="255.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="100.0" showTickLabels="true" showTickMarks="true" />
+                  <Slider fx:id="greenSlider" layoutX="124.0" layoutY="14.0" max="255.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="100.0" showTickLabels="true" showTickMarks="true" />
+                  <Slider fx:id="blueSlider" layoutX="241.0" layoutY="14.0" max="255.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="100.0" showTickLabels="true" showTickMarks="true" />
+                  <Label fx:id="redLabel" layoutX="25.0" layoutY="339.0" prefHeight="41.0" prefWidth="82.0" text="Red">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="greenLabel" layoutX="125.0" layoutY="344.0" prefHeight="30.0" prefWidth="118.0" text="Green">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="blueLabel" layoutX="265.0" layoutY="341.0" prefHeight="35.0" prefWidth="113.0" text="Blue">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
